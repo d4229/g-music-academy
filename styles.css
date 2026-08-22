@@ -36,6 +36,8 @@ body { margin: 0; background: var(--cream); color: var(--forest); font-family: v
 .button-primary,.button-dark { background: var(--forest); color: white; }
 .button span { font-size: 1rem; }
 .hero-art { background: var(--sprout); min-height: 430px; overflow: hidden; position: relative; }
+.hero-cube { display: none; }
+.mobile-program-cubes { display: none; }
 .hero-art:before { background: var(--leaf); border-radius: 100% 0 100% 0; content: ''; height: 54%; position: absolute; right: 10%; top: 7%; transform: rotate(25deg); width: 34%; }
 .hero-art:after { background: var(--sun); border-radius: 50%; bottom: 13%; content: ''; height: 23%; left: 13%; position: absolute; width: 23%; }
 .hero-orbit { border: 1px solid rgba(36,76,58,.5); border-radius: 50%; position: absolute; z-index: 1; }
@@ -77,3 +79,51 @@ body { margin: 0; background: var(--cream); color: var(--forest); font-family: v
 
 @media (max-width: 760px) { .contact-header,.contact-detail-grid { gap: 2.5rem; grid-template-columns: 1fr; }.contact-detail-grid { margin-top: 3rem; } }
 @media (max-width: 760px) { .story-grid { grid-template-columns: 1fr; grid-template-rows: 300px 200px 200px 200px; }.story-video,.story-trophy { grid-column: auto; grid-row: auto; } }
+
+/* Mobile is intentionally composed as a compact, touch-first version rather than a reduced desktop layout. */
+@media (max-width: 760px) {
+  .hero { align-content: start; gap: 1.2rem; min-height: calc(100svh - 70px); padding: 1.35rem 1.25rem 1.5rem; }
+  .hero-copy { align-self: auto; }
+  .hero .eyebrow { margin-bottom: .55rem; }
+  .hero h1 { font-size: clamp(3rem, 13vw, 4.15rem); line-height: .98; }
+  .hero-description { font-size: .82rem; line-height: 1.7; margin: .8rem 0 1rem; }
+  .hero-actions { gap: 1rem; }
+  .hero-actions .button { padding: .8rem .95rem; }
+  .hero-actions .text-link { font-size: .78rem; }
+  .hero-art { aspect-ratio: 1 / .86; background: var(--cream); display: grid; gap: 4px; grid-template-columns: 1fr 1fr; grid-template-rows: 1.25fr .75fr; min-height: 0; order: 0; overflow: hidden; padding: 4px; }
+  .hero-art::before,.hero-art::after,.hero-art .hero-orbit,.hero-art .hero-note,.hero-art > p { display: none; }
+  .hero-cube { display: block; overflow: hidden; position: relative; }
+  .cube-one { background: center 42% / cover url('assets/strory/%EB%8B%A8%EC%B2%B4%EC%82%AC%EC%A7%84.jpg') no-repeat; grid-column: 1 / -1; }
+  .cube-two { background: center / cover url('assets/strory/%EC%A0%84%EA%B5%AD%ED%95%99%EC%83%9D%EC%9D%8C%EC%95%85%EC%BD%A9%EC%BF%A0%EB%A5%B4.jpg') no-repeat; }
+  .cube-three { background: center / cover url('assets/strory/%ED%8A%B8%EB%A1%9C%ED%94%BC.jpg') no-repeat; }
+  .hero-footer { display: none; }
+  .section { padding: 4.5rem 1.25rem; }
+  .section-heading > p:last-child { font-size: .84rem; margin-top: 1.15rem; }
+  .program-grid { margin-top: 2.25rem; }
+  .program-card { min-height: 390px; padding: 1.5rem; }
+  .program-card h3 { font-size: 2.35rem; }
+  .press-feature-grid { gap: 1rem; margin-top: 2.25rem; }
+  .press-links { margin-top: 2.75rem; }
+  .story-grid { margin-top: 2.5rem; }
+  .story-intro p:last-of-type { font-size: .84rem; margin-top: 1.2rem; }
+  .contact-detail-grid { margin-top: 2.5rem; }
+}
+
+@media (max-width: 760px) {
+  .hero { display: block; min-height: 0; padding: 1.25rem 1.25rem 1.5rem; }
+  .hero h1 { font-size: clamp(2.65rem, 11vw, 3.45rem); }
+  .hero-description { display: none; }
+  .hero-actions { display: none; }
+  .hero-art { display: none; }
+  .mobile-program-cubes { display: grid; gap: 4px; grid-template-columns: 1fr 1fr; grid-template-rows: 205px 170px; margin-top: 1.15rem; }
+  .mobile-course-art { background: var(--sprout); grid-column: 1 / -1; overflow: hidden; position: relative; }
+  .mobile-course-art::before { background: var(--leaf); border-radius: 100% 0 100% 0; content: ''; height: 84%; position: absolute; right: 18%; top: 8%; transform: rotate(32deg); width: 25%; }
+  .mobile-course-art::after { border: 1px solid rgba(36,76,58,.48); border-radius: 50%; content: ''; height: 82%; left: 24%; position: absolute; top: 9%; transform: rotate(-34deg); width: 34%; }
+  .mobile-course-art span { color: var(--forest); font: 5.1rem var(--display); left: 39%; line-height: 1; position: absolute; top: 20%; z-index: 1; }
+  .mobile-course-art i { color: var(--forest); font: 3rem var(--display); font-style: normal; left: 15%; line-height: 1; position: absolute; top: 59%; z-index: 1; }
+  .mobile-course-art b { bottom: .85rem; font-size: .45rem; letter-spacing: .13em; line-height: 1.3; position: absolute; right: .85rem; text-align: right; z-index: 1; }
+  .mobile-course-card { color: var(--forest); display: flex; flex-direction: column; padding: 1rem .8rem; text-decoration: none; }
+  .mobile-junior { background: var(--sprout); }.mobile-adult { background: #f7e7bb; }
+  .mobile-course-card small { font-size: .52rem; font-weight: 700; letter-spacing: .1em; }.mobile-course-card strong { font-family: var(--display); font-size: clamp(1.28rem, 5vw, 1.75rem); font-weight: 400; letter-spacing: -.04em; line-height: 1.05; margin-top: auto; }.mobile-course-card em { font-size: .42rem; font-style: normal; font-weight: 700; letter-spacing: .04em; line-height: 1.55; margin-top: .6rem; }
+  .program-section { display: none; }
+}
