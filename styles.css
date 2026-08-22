@@ -126,4 +126,7 @@ body { margin: 0; background: var(--cream); color: var(--forest); font-family: v
   .mobile-junior { background: var(--sprout); }.mobile-adult { background: #f7e7bb; }
   .mobile-course-card small { font-size: .52rem; font-weight: 700; letter-spacing: .1em; }.mobile-course-card strong { font-family: var(--display); font-size: clamp(1.28rem, 5vw, 1.75rem); font-weight: 400; letter-spacing: -.04em; line-height: 1.05; margin-top: auto; }.mobile-course-card em { font-size: .42rem; font-style: normal; font-weight: 700; letter-spacing: .04em; line-height: 1.55; margin-top: .6rem; }
   .program-section { display: none; }
+  .mobile-quick-actions { background: var(--cream); border-top: 1px solid rgba(36,76,58,.22); box-shadow: 0 -8px 22px rgba(0,0,0,.14); }
+  .mobile-quick-actions a { color: var(--forest); }
+  .mobile-quick-actions a + a { border-left-color: rgba(36,76,58,.2); }
 }
