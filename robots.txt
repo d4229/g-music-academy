@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://d4229.github.io/g-music-academy/sitemap.xml
